@@ -1,0 +1,29 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1.5px solid black ;
+}
+
+.nav-links {
+    display: flex;
+    gap: 60px;
+}
+
+nav img {
+    height: 100px;
+    width: 230px;
+}
+
+#booking {
+    font-family: 'Faculty Glyphic';
+}
+
+#reviews {
+    font-family: 'Faculty Glyphic';
+}
+
+#gallery {
+    font-family: 'Faculty Glyphic';
+}
