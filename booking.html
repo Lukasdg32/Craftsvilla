@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Craftsvilla</title>
-    <link rel="stylesheet" href="style.css">
-    <style> @import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Faculty+Glyphic&display=swap');
-</style>
+  <title>Booking - Craftsvilla</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <style> @import url(https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Faculty+Glyphic&display=swap);</style>
 </head>
 <body>
     <header>
@@ -14,11 +13,11 @@
             <a href="index.html">
               <img src="images/craftsvilla.png" alt="The logo of Craftsvilla">
             </a>
-            <div class="nav-links">
+            <div class="nav-links"></div>
             <div id="booking">
              <a href="booking.html" title="Booking">Booking</a>
             </div>
-            <div id="reviews">
+             <div id="reviews">
                 <a href="reviews.html" title="Reviews">Reviews</a>
             </div>
             <div id="gallery">
@@ -26,75 +25,80 @@
             </div>
         </nav>
     </header>
-
-    <section class="hero">
-         <h1 id="quotes">Welcome to Craftsvilla. Join family-friendly workshops where all materials are included and no experience is needed.</h1>
-        <div class="hero-content">
-            <img id="main-image" src="images/craftsvilla-hero.png" alt="">
-        </div>
-        <div id="order-button"><button>Order Here</button></div>
-    </section>
-
- <section class="about">
-        <div>
-            <div class="about-us">
-            <h1>About Us</h1>
-            <p>At Craftsvilla, we bring people together through creativity. Whether it's parents bonding with children, friends exploring new hobbies, or colleagues finding relaxation after work – we offer joyful, guided art experiences for everyone.</p>
-            </div>
-            <div class="services">
-
-            <div class="card">
+    <div id="intro">
+    <h1>Book your Craftsvilla workshop online. Choose an art form, pick a preferred date, and send us your booking request.</h1>
+    </div>
+    <div class="product-cards">
                 <div id="mosaic-card">
                     <img id="mosaic-img" src="images/mosaic.png" alt="">
                     <h2>Mosaic Art</h2>
                     <h3>400 kr</h3>
                     <p>Included in set: Frame, A4 size wooden board, small colored stones & rubber.</p>
+                    <div class="art-button"><button>Bestill nå</button></div>
             </div>
              <div id="watercolor-card">
                     <img id="watercolor-img" src="images/watercolor.png" alt="">
                     <h2>Watercolor Art</h2>
                     <h3>200 kr</h3>
                     <p>Included in set: Frame, watercolor paper with design template, watercolor paints & brushes.</p>
+                    <div class="art-button"><button>Bestill nå</button></div>
             </div>
             <div id="canvas-card">
                     <img id="canvas-img" src="images/canvas.png" alt="">
                     <h2>Canvas Art</h2>
                     <h3>300 kr</h3>
                     <p>Included in set: Frame, acrylic paper with design template, acrylic colours & brushes.</p>
+                    <div class="art-button"><button>Bestill nå</button></div>
             </div>
             </div>
+                <div class="form-container">
+                <form action="">
+                    <label for="">Navn</label> <br /><br />
+                    <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        value="Skriv inn navnet ditt."
+                    />
+                    <label for="">Email</label><br /><br />
+                    <input 
+                    type="text"
+                    name="email"
+                    id="email"
+                    value="Skriv inn eposten din."
+                    />
+                    <label for="">Phone number</label> <br /><br />
+                    <input 
+                    type="text"
+                    name="number"
+                    id="number"
+                    value="Skriv inn nummeret ditt."
+                    />
+                   <label for="workshop">Choose a workshop</label> <br /><br />
+                   <select id="workshop" name="workshop">
+                    <option value="mosaic">Mosaic</option>
+                    <option value="watercolor">Watercolor</option>
+                    <option value="canvas">Canvas</option>
+                   </select>
 
-            <div id="benefits">
-       <h2>Benefits of Craftsvilla</h2>
+                   <label for="time-date">Time and Date</label> <br /><br />
+                   <input 
+                   type="datetime-local"
+                   name="date-time"
+                   id="date-time"
+                   />
+                   <label for="participants">Number of participants</label> <br /><br />
+                   <input 
+                   type="number" 
+                   name="participants" 
+                   id="participants"
+                   ><br /><br />
+                    <input type="button" value="Send form" />
 
-       <div class="benefits-container">
-        <div class="benefit-item">
-        <img src="images/no-experience.png" alt="No experience needed icon">
-        <p>No experience needed</p>
-        </div>
-
-    <div class="benefit-item">
-      <img src="images/all-materials.png" alt="Materials included icon">
-      <p>All materials included</p>
-    </div>
-
-    <div class="benefit-item">
-      <img src="images/all-ages.png" alt="All ages icon">
-      <p>For all ages</p>
-    </div>
-
-    <div class="benefit-item">
-      <img src="images/recharge.png" alt="Relax and recharge icon">
-      <p>Relax and recharge</p>
-    </div>
-  </div>
-</div>
-
-            </div>
-    </section>
-
-    
-    <footer>
+                </form>
+                </div>
+            
+            <footer>
         <div class="footer-container">
 
           <div class="contact-info">
@@ -132,5 +136,5 @@
             
     </div>
     </footer>
-</body>
-</html>
+<body>
+<html>
