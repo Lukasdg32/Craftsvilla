@@ -8,6 +8,16 @@
     <style> @import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Faculty+Glyphic&display=swap');
 </style>
 </head>
+<script>
+function openLightbox(image) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = image.src;
+    document.getElementById("lightbox-text").innerText = image.alt;
+}
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
 <body>
     <header>
         <nav>
@@ -27,15 +37,37 @@
         </nav>
     </header>
     <h1>Welcome to our gallery! Here you can explore moments from our workshops and finished artwork from Craftsvilla participants!</h1>
-    <section class="photo-gallery">
-        <a href="images/gallery1.png" target="_blank">
-            <img class="gallery-img" src="images/gallery1.png" alt="People">
-        </a>
-        <img class="gallery-img" src="images/craftsvilla-art.png" alt="">
-        <img class="gallery-img" src="images/family.png" alt="">
-        <img class="gallery-img" src="images/tools.png" alt="">
-    </section>
-    <footer>
+   <section  class="photo-gallery">
+    <img class="gallery-img"
+    src="images/gallery1.png"
+    alt="Friends and family painting together at Craftsvilla"
+    onclick="openLightbox(this)">
+
+    <img class="gallery-img"
+    src="images/craftsvilla-art.png"
+    alt="Finished watercolor artwork created during a workshop."
+    onclick="openLightbox(this)">
+
+    <img class="gallery-img"
+    src="images/family.png"
+    alt="Family with finished artwork at Craftsvilla."
+    onclick="openLightbox(this)">
+
+    <img class="gallery-img"
+    src="images/tools.png"
+    alt="Art tools and materials included in every workshop."
+    onclick="openLightbox(this)">
+
+</section>
+
+<div id="lightbox" onclick="closeLightbox()">
+    <span id="close-btn">&times;</span>
+
+    <img id="lightbox-img" src="" alt="">
+
+    <p id="lightbox-text"></p>
+</div>
+<footer>
         <div class="footer-container">
 
           <div class="contact-info">
@@ -44,24 +76,26 @@
                 <img src="images/email.png" alt="">
                     <h2>craftsvilla@gmail.com <h2>
                 </div>
+                <br><br>
 
             <div class="contact">
                 <img src="images/phone.png" alt="">
                     <h2>(420) 475-0069</h2>
                 </div>
+                <br><br>
 
         <div class="location">
                 <img src="images/address.png" alt="">
-                    <h2>Channel District, Tampa, Florida, United States</h2>
+                    <h2>Channel District, Tampa, Florida, USA</h2>
                 </div>
       </div>
       <div>
-         </div class="footer-links">
-         <a href="index.html">Home</a>
-         <a href="index.html">Booking</a>
-         <a href="index.html">Reviews</a>
-         <a href="index.html">Gallery</a>
-         <div>
+        <div id="footer-links">
+    <a href="index.html">Home</a>
+    <a href="booking.html">Booking</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="gallery.html">Gallery</a>
+   </div>
 
         <div class="socialmedia">
                 <img src="images/youtube.png" alt="YouTube">

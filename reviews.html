@@ -14,7 +14,7 @@
             <a href="index.html">
               <img src="images/craftsvilla.png" alt="The logo of Craftsvilla">
             </a>
-            <div class="nav-links"></div>
+            <div class="nav-links">
             <div id="booking">
              <a href="booking.html" title="Booking">Booking</a>
             </div>
@@ -26,27 +26,28 @@
             </div>
         </nav>
     </header>
-    <h2>We would love to hear your feedback!</h2>
-    <p>Fill out the form below!</p>
+    <h1>We would love to hear your feedback!</h1>
+    <h3>Fill out the form below!</h3>
     </div>
-      <section id="kontakt">
-         <h4 class="basic-heading2">Kontakt Oss</h4>
+        <div class="feedback">
             <form action="">
-                <label for="">Navn</label> <br /><br />
+                <label for="">Navn</label> <br>
                     <input
                         type="text"
                         name="name"
                         id="name"
                         value="Skriv inn navnet ditt."
                     />
-                <label for="">Email</label><br /><br />
+                    <br>
+                <label for="">Email</label><br>
                     <input 
                     type="text"
                     name="email"
                     id="email"
                     value="Skriv inn eposten din.">
+                    <br>
 
-                <label for="workshop">Workshop participated in.</label> <br /><br />
+                <label for="workshop">Workshop participated in.</label><br>
                    <select id="worshop" name="workshop">
                     <option value="mosaic">Mosaic</option>
                     <option value="watercolor">Watercolor</option>
@@ -54,67 +55,77 @@
                     <option value="canvas">Other</option>
                    </select>
 
-                   <br /><br />
-                    <label for="">What did you enjoy the most?</label><br /><br />
-                    <textarea name="" id="" cols="50" rows="6">Write feedback here...</textarea
-                    ><br /><br />
+                   <br>
+                    <label for="">What did you enjoy the most?</label><br>
+                    <textarea name="" id="" cols="50" rows="6">Write feedback here...</textarea>
+                    <br>
 
-                    <br /><br />
                     <label for="">How could we improve your experience?</label><br /><br />
-                    <textarea name="" id="" cols="50" rows="6">Write feedback here...</textarea
-                    ><br /><br />
-
-                    <p>Would you recommend Craftsvilla to others?</p>
-                    <input type="radio" id="yes" name="option" value="yes">
-                    <label for="yes">Yes</label><br>
-
-                    <input type="radio" id="no" name="option" value="no">
-                    <label for="no">No</label><br>
-
-                    <input type="radio" id="maybe" name="option" value="maybe">
-                    <label for="maybe">Maybe</label><br>
-
-                    <br><input type="checkbox" id="permission" name="permission" value="permission"> Jeg gir CRAFTSVILLA tillatelse til å dele tilbakemeldingene mine på nettstedet deres eller sosiale medier.
+                    <textarea name="" id="" cols="50" rows="6">Write feedback here...</textarea>
+                    <br>
                     
-                    <form action="/upload" method="POST enctype=multipart/form-data">
-                        <label for="img">Select image:</label>
-                        <input type="file" id="img" name="img" accept="image/*">
-                        <input type="submit" value="Upload image">
-                    </form>
+                <p>Would you recommend Craftsvilla to others?</p>
+                <div class="alternatives">
+                    <div class="option">
+                    <input type="radio" id="yes" name="option" value="yes">
+                    <label for="yes">Yes</label>
+                    </div>
 
-                    <input type="button" value="Send feedback." />
+                    <div class="option">
+                    <input type="radio" id="no" name="option" value="no">
+                    <label for="no">No</label>
+                    </div>
+
+                    <div class="option">
+                    <input type="radio" id="maybe" name="option" value="maybe">
+                    <label for="maybe">Maybe</label>
+                    </div>
+                </div>
+
+                <div class="permission-box">
+                    <label for="permission">
+                <p>I give Craftsvilla permission to share my messages back on their website or social media.</p> 
+                </label>
+
+                <input type="checkbox" id="permission" name="permission" value="permission">
+                </div>
+
+                <div class="image-upload">
+                    <form action="/upload" POST enctype=multipart/form-data>
+                        <label for="img" id="select-text">Select image:</label>
+                        <input type="file" id="img" name="img" accept="image/*">
+                        <input type="submit" value="Upload image" id="upload">
+                 </div>
+
+                    <input type="button" value="Send feedback" id="feedback-button"/>
             </form>
+            </div>
 
                <div class="review-cards">
-        <div id="warner-review">
-            <img src="images/henry-warner.png" alt="Profile picture of Henry Warner" class="avatar">
-            <div>
-                <h3>Henry Warner</h3>
-            </div>
-        </div>
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"Generic"</p>
-        <br><br>
-        <div id="white-review">
-            <img src="images/maria-white.png" alt="Profile picture of Maria White" class="avatar">
-            <div>
-                <h3>Maria White</h3>
-            </div>
-        </div>
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"Generic"</p>
-        <br><br>
-        <div id="homelander-review">
-            <img src="images/homelander.jpg" alt="Profile picture of Homelander" class="avatar">
-            <div>
-                <h3>Homelander</h3>
-            </div>
-        </div>
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"You will regret making this trash!"</p>
-    </div>
-    </div>
-    <footer>
+
+  <div class="review-card">
+    <img src="images/henry-warner.png" alt="Profile picture of Henry Warner" class="avatar">
+    <h3>Henry Warner</h3>
+    <div class="stars">★★★★★</div>
+    <p class="review-text">"The mosaic workshop was relaxing, friendly, and easy to follow. I had no experience, but still left with something I was proud of."</p>
+  </div>
+
+  <div class="review-card">
+    <img src="images/maria-white.png" alt="Profile picture of Maria White" class="avatar">
+    <h3>Maria White</h3>
+    <div class="stars">★★★★★</div>
+    <p class="review-text">"A lovely activity for the whole family. The materials were ready, the atmosphere was calm, and the staff made everyone feel welcome."</p>
+  </div>
+
+  <div class="review-card">
+    <img src="images/homelander.jpg" alt="Profile picture of HomelanderFan" class="avatar">
+    <h3>HomelanderFan66</h3>
+    <div class="stars">★★★★★</div>
+    <p class="review-text">"Great place to relax and recharge. The canvas painting session was fun, creative, and much better than I expected."</p>
+  </div>
+
+</div>
+<footer>
         <div class="footer-container">
 
           <div class="contact-info">
@@ -123,24 +134,26 @@
                 <img src="images/email.png" alt="">
                     <h2>craftsvilla@gmail.com <h2>
                 </div>
+                <br><br>
 
             <div class="contact">
                 <img src="images/phone.png" alt="">
                     <h2>(420) 475-0069</h2>
                 </div>
+                <br><br>
 
         <div class="location">
                 <img src="images/address.png" alt="">
-                    <h2>Channel District, Tampa, Florida, United States</h2>
+                    <h2>Channel District, Tampa, Florida, USA</h2>
                 </div>
       </div>
       <div>
-         </div class="footer-links">
-         <a href="index.html">Home</a>
-         <a href="index.html">Booking</a>
-         <a href="index.html">Reviews</a>
-         <a href="index.html">Gallery</a>
-         <div>
+        <div id="footer-links">
+    <a href="index.html">Home</a>
+    <a href="booking.html">Booking</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="gallery.html">Gallery</a>
+   </div>
 
         <div class="socialmedia">
                 <img src="images/youtube.png" alt="YouTube">
@@ -152,5 +165,5 @@
             
     </div>
     </footer>
-    <body>
+</body>
 </html>

@@ -7,6 +7,11 @@
   <link rel="stylesheet" href="style.css">
   <style> @import url(https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Faculty+Glyphic&display=swap);</style>
 </head>
+<script>
+function showBookingMessage() {
+    alert("Thank you for booking with CRAFTSVILLA! We will contact you soon to confirm your spot.");
+}
+</script>
 <body>
     <header>
         <nav>
@@ -29,22 +34,22 @@
     <h1>Book your Craftsvilla workshop online. Choose an art form, pick a preferred date, and send us your booking request.</h1>
     </div>
     <div class="product-cards">
-                <div id="mosaic-card">
-                    <img id="mosaic-img" src="images/mosaic.png" alt="">
+                <div id="mosaic-card2">
+                    <img id="productmosaic-img" src="images/mosaic.png" alt="">
                     <h2>Mosaic Art</h2>
                     <h3>400 kr</h3>
                     <p>Included in set: Frame, A4 size wooden board, small colored stones & rubber.</p>
                     <div class="art-button"><button>Bestill nå</button></div>
             </div>
-             <div id="watercolor-card">
-                    <img id="watercolor-img" src="images/watercolor.png" alt="">
+             <div id="watercolor-card2">
+                    <img id="productwatercolor-img" src="images/watercolor.png" alt="">
                     <h2>Watercolor Art</h2>
                     <h3>200 kr</h3>
                     <p>Included in set: Frame, watercolor paper with design template, watercolor paints & brushes.</p>
                     <div class="art-button"><button>Bestill nå</button></div>
             </div>
-            <div id="canvas-card">
-                    <img id="canvas-img" src="images/canvas.png" alt="">
+            <div id="canvas-card2">
+                    <img id="productcanvas-img" src="images/canvas.png" alt="">
                     <h2>Canvas Art</h2>
                     <h3>300 kr</h3>
                     <p>Included in set: Frame, acrylic paper with design template, acrylic colours & brushes.</p>
@@ -52,53 +57,63 @@
             </div>
             </div>
                 <div class="form-container">
-                <form action="">
-                    <label for="">Navn</label> <br /><br />
+                <form action=""> <br>
+                    <label for="">Name</label> <br>
                     <input
                         type="text"
                         name="name"
                         id="name"
-                        value="Skriv inn navnet ditt."
+                        value="Name..."
                     />
-                    <label for="">Email</label><br /><br />
+                    <br>
+                    <label for="">Email</label><br />
                     <input 
                     type="text"
                     name="email"
                     id="email"
-                    value="Skriv inn eposten din."
+                    value="Email..."
                     />
-                    <label for="">Phone number</label> <br /><br />
+                    <br>
+                    <label for="">Phone number</label> <br />
                     <input 
                     type="text"
                     name="number"
                     id="number"
-                    value="Skriv inn nummeret ditt."
+                    value="Number..."
                     />
-                   <label for="workshop">Choose a workshop</label> <br /><br />
+                    <br>
+                   <label for="workshop">Choose a workshop</label> <br />
                    <select id="workshop" name="workshop">
                     <option value="mosaic">Mosaic</option>
                     <option value="watercolor">Watercolor</option>
                     <option value="canvas">Canvas</option>
                    </select>
+                   <br>
 
-                   <label for="time-date">Time and Date</label> <br /><br />
+                   <label for="time-date">Time and Date</label> <br />
                    <input 
                    type="datetime-local"
                    name="date-time"
                    id="date-time"
                    />
-                   <label for="participants">Number of participants</label> <br /><br />
+                   <br>
+                   <label for="participants">Number of participants</label> <br />
                    <input 
                    type="number" 
                    name="participants" 
                    id="participants"
-                   ><br /><br />
-                    <input type="button" value="Send form" />
-
+                   ><br /> <br>
+                    <input 
+                    type="button"
+                    value="Send form"
+                    id="form-button"
+                    action="/send"
+                    onclick="showBookingMessage()"
+                    />
                 </form>
                 </div>
             
-            <footer>
+<footer>
         <div class="footer-container">
 
           <div class="contact-info">
@@ -107,24 +122,26 @@
                 <img src="images/email.png" alt="">
                     <h2>craftsvilla@gmail.com <h2>
                 </div>
+                <br><br>
 
             <div class="contact">
                 <img src="images/phone.png" alt="">
                     <h2>(420) 475-0069</h2>
                 </div>
+                <br><br>
 
         <div class="location">
                 <img src="images/address.png" alt="">
-                    <h2>Channel District, Tampa, Florida, United States</h2>
+                    <h2>Channel District, Tampa, Florida, USA</h2>
                 </div>
       </div>
       <div>
-         </div class="footer-links">
-         <a href="index.html">Home</a>
-         <a href="index.html">Booking</a>
-         <a href="index.html">Reviews</a>
-         <a href="index.html">Gallery</a>
-         <div>
+        <div id="footer-links">
+    <a href="index.html">Home</a>
+    <a href="booking.html">Booking</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="gallery.html">Gallery</a>
+   </div>
 
         <div class="socialmedia">
                 <img src="images/youtube.png" alt="YouTube">
